@@ -1,0 +1,56 @@
+# fzf設定
+source ~/.fzf.bash
+export FZF_DEFAULT_OPTS='--reverse --border'
+
+# 予め作っておいたコマンドのリストでfzfする
+function commands-to-fzf() {
+  local COMMAND=$(cat ~/.fzflist/commands.txt | fzf +m)
+  if [ -n "$COMMAND" ]; then
+    eval $COMMAND
+    history -s $COMMAND # ↑押した時の直近の履歴に入る
+  fi
+}
+
+# 予め作っておいたパスのリストでfzfしてcdする
+function directories-to-fzf-cd() {
+  local DIR_PATH=$(cat ~/.fzflist/directories.txt | fzf +m)
+  if [ -n "$DIR_PATH" ]; then
+    eval cd $DIR_PATH
+    eval history -s cd $DIR_PATH
+  fi
+}
+
+# 予め作っておいたパスのリストでfzfしてcodeする
+function files-to-fzf-code() {
+  local FILEPATH=$(cat ~/.fzflist/files.txt | fzf +m)
+  if [ -n "$FILEPATH" ]; then
+    eval code $FILEPATH
+    eval history -s code $FILEPATH
+  fi
+}
+
+alias c='commands-to-fzf'
+alias d='directories-to-fzf-cd'
+alias f='files-to-fzf-code'
+
+function update-commands() {
+  cat ~/Projects/dotfiles/fzf_manual_commands.txt > ~/.fzflist/commands.txt;
+  find ~/Projects -mindepth 1 -maxdepth 1 -type d | sed -e "s@/Users/kawa@code -a ~@" >> ~/.fzflist/commands.txt;
+}
+
+function update-directories() {
+  cat ~/Projects/dotfiles/fzf_manual_directories.txt > ~/.fzflist/directories.txt;
+  find ~/Projects -maxdepth 1 -type d | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/directories.txt;
+  find ~/Projects/Documents -maxdepth 1 -type d | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/directories.txt;
+}
+
+function update-files() {
+  cat ~/Projects/dotfiles/fzf_manual_files.txt > ~/.fzflist/files.txt;
+  find ~/Projects/Documents -maxdepth 3 -type f | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/files.txt;
+  find ~/Projects/dotfiles -maxdepth 2 -type f | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/files.txt;
+  find ~/.fzflist -maxdepth 1 -type f | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/files.txt;
+}
+
+update-commands
+update-directories
+update-files

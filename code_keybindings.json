@@ -1,0 +1,45 @@
+[
+  {
+      "key": "ctrl+shift+a",
+      "command": "cursorHomeSelect",
+      "when": "editorTextFocus"
+  },{
+      "key": "ctrl+shift+e",
+      "command": "cursorEndSelect",
+      "when": "editorTextFocus"
+  },{
+      "key": "shift+cmd+]",
+      "command": "workbench.action.terminal.focusNext",
+      "when": "terminalFocus"
+  },{
+      "key": "shift+cmd+[",
+      "command": "workbench.action.terminal.focusPrevious",
+      "when": "terminalFocus"
+  },{
+      "key": "cmd+w",
+      "command": "workbench.action.terminal.kill",
+      "when": "terminalFocus"
+  },{
+      "key": "alt+t",
+      "command": "workbench.action.terminal.toggleTerminal"
+  },{
+      "key": "cmd+o",
+      "command": "list.select",
+      "when": "explorerViewletFocus && listFocus && explorerViewletVisible && !inputFocus"
+  },{
+    "key": "cmd+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus && listFocus && explorerViewletVisible && !inputFocus"
+  },{
+      "key": "alt+o",
+      "command": "cursorPageUp",
+      "when": "editorTextFocus"
+  },{
+      "key": "alt+.",
+      "command": "cursorPageDown",
+      "when": "editorTextFocus"
+  },{
+      "key": "ctrl+alt+t",
+      "command": "workbench.action.togglePanelPosition"
+  }
+]

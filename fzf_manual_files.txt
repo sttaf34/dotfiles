@@ -1,0 +1,6 @@
+~/.ssh/config
+~/.gitconfig
+~/.bashrc
+~/.bash_history
+~/.bash_profile
+~/.inputrc

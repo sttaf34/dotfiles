@@ -1,0 +1,15 @@
+# -n -> 上書き禁止
+# -v -> ログ出力
+alias cp='cp -n -v'
+alias mv='mv -n -v'
+
+alias rm='gmv -f --backup=numbered --target-directory ~/.Trash/'
+
+# -h -> サイズを読みやすくする
+# -F -> ディレクトリの末尾にスラッシュ
+alias ls='ls -hF'
+alias la='ls -a'
+alias ll='ls -l'
+
+alias g='git'
+alias start='open'

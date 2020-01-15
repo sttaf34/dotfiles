@@ -1,0 +1,29 @@
+source ~/.bashrc
+nodenv rehash
+ifconfig | grep 192.168
+history | tail -10
+npx gatsby develop
+npx gatsby develop -H 0.0.0.0
+git add . && git cmm
+grm -rf ~/.Trash/*
+serve ~/Projects/Documents/HTMLCSS
+echo $PATH | tr ':' '\n'
+nodenv versions
+docker image ls
+docker container ls
+docker container ls -a
+git-add-commit-push-current-projects
+git-pull-current-projects
+git commit --amend
+npm ls --depth=0
+npm ls -g --depth=0
+docker container ls -aq | xargs docker container rm
+docker image ls -aq | xargs docker image rm
+docker-compose up
+docker-compose down
+docker-compose build --no-cache
+heroku login
+heroku container:login
+yarn add --dev
+yarn install
+docker container exec -it CONTAINER_ID /bin/bash
