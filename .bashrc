@@ -20,7 +20,6 @@ if [ $(uname) = "Darwin" ] ; then
   export PS1="\[\e[1;32m\][\w]\[\e[00m\]\[\e[1;33m\]\$(__git_ps1)\[\e[00m\]\n\$ "
 else
   source /c/Users/stride29/Projects/Documents/Commands/git/git-prompt.sh
-  GIT_PS1_SHOWDIRTYSTATE=true
   export PS1="\[\e[1;32m\][\w]\[\e[00m\]\[\e[1;33m\]$(__git_ps1)\[\e[00m\]\n\$ "
 fi
 
