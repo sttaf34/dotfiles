@@ -43,7 +43,8 @@ function echo-git-repository-status () {
   do
     cd $line
     if [ "$(__git_ps1)" != " (master=)" ] ; then
-      pwd | tr '\n' ' ' && __git_ps1 && echo ''
+      printf "\033[35m$(pwd)\033[m\n" | tr '\n' ' '
+      printf "\033[33m$(__git_ps1)\033[m\n"
     fi
   done
 }
