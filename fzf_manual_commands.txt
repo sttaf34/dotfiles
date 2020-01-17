@@ -27,4 +27,5 @@ heroku container:login
 yarn add --dev
 yarn install
 docker container exec -it CONTAINER_ID /bin/bash
-git branch -v
+echo-git-repository-status
+git branch -v && echo '' && git status
