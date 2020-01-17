@@ -14,13 +14,15 @@ if [ $(uname) = "Darwin" ] ; then
 fi
 
 # ブロンプト -> http://babyp.blog55.fc2.com/blog-entry-663.html
+source ~/Projects/Documents/Commands/git/git-prompt.sh
+source ~/Projects/Documents/Commands/git/git-completion.bash
+GIT_PS1_SHOWUPSTREAM=true
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
 if [ $(uname) = "Darwin" ] ; then
-  source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
-  GIT_PS1_SHOWDIRTYSTATE=true
   export PS1="\[\e[1;32m\][\w]\[\e[00m\]\[\e[1;33m\]\$(__git_ps1)\[\e[00m\]\n\$ "
 else
-  source /c/Users/stride29/Projects/Documents/Commands/git/git-prompt.sh
-  GIT_PS1_SHOWDIRTYSTATE=true
   export PS1="\[\e[1;32m\][\w]\[\e[00m\]\[\e[1;33m\]\$(__git_ps1)\[\e[00m\]"$'\n\$ '
 fi
 
