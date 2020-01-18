@@ -12,8 +12,6 @@ nodenv versions
 docker image ls
 docker container ls
 docker container ls -a
-git-add-commit-push-current-projects
-git-pull-current-projects
 git commit --amend
 npm ls --depth=0
 npm ls -g --depth=0
@@ -28,4 +26,5 @@ yarn add --dev
 yarn install
 docker container exec -it CONTAINER_ID /bin/bash
 echo-git-repository-status
-git branch -v && echo '' && git status
+docker-compose exec application bash
+docker-compose exec db bash
