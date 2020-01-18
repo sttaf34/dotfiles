@@ -1,0 +1,11 @@
+tap "beeftornado/rmtree"
+tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/core"
+
+brew "circleci"
+brew "coreutils"
+brew "fzf"
+brew "git"
+brew "mysql-client"
+brew "heroku/brew/heroku"
