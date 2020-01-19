@@ -12,6 +12,7 @@
   co = checkout
   unstage = reset HEAD
   br = branch -v
+  tree = log --graph --pretty=format:'%x09%C(yellow)%h  %C(cyan)%ar %x09%C(magenta)%d%Creset %s'
 
 [core]
   editor = code --wait
