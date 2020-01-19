@@ -13,4 +13,4 @@ alias ll='ls -l'
 
 alias g='git'
 alias start='open'
-alias gst='git branch -v && echo '' && git status'
+alias gst='git branch -va && echo '' && git status'
