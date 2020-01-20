@@ -228,7 +228,6 @@
                                 },
                                 "to": [
                                     { "key_code": "japanese_eisuu" },
-                                    // { "key_code": "o" },
                                     {
                                         "key_code": "p",
                                         "modifiers": [
