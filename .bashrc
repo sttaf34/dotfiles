@@ -38,10 +38,11 @@ fi
 export HISTIGNORE="c:f:d"
 
 # ~/Projects 下のリポジトリの現在状況を一覧表示
-function echo-git-repository-status () {
+function git-echo-repository-status () {
   find ~/Projects -mindepth 1 -maxdepth 1 -type d | sort | while read line
   do
     cd $line
+    git fetch
     if [ "$(__git_ps1)" != " (master=)" ] ; then
       printf "\033[35m$(pwd)\033[m\n" | tr '\n' ' '
       printf "\033[33m$(__git_ps1)\033[m\n"
