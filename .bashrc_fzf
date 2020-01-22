@@ -34,13 +34,15 @@ alias d='directories-to-fzf-cd'
 alias f='files-to-fzf-code'
 
 function update-commands() {
-  cat ~/Projects/dotfiles/fzf_manual_commands.txt > ~/.fzflist/commands.txt;
-  find ~/Projects -mindepth 1 -maxdepth 1 -type d | sed -e "s@/Users/kawa@code -a ~@" >> ~/.fzflist/commands.txt;
-  history | tail -100 | while read number command
+  tmpfile=$(mktemp)
+  cat ~/Projects/dotfiles/fzf_manual_commands.txt > $tmpfile
+  find ~/Projects -mindepth 1 -maxdepth 1 -type d | sed -e "s@/Users/kawa@code -a ~@" >> $tmpfile
+  history | tail -500 | while read number command
   do
     echo $command
-  done >> ~/.fzflist/commands.txt;
-  cat ~/.fzflist/commands.txt | sort | uniq > ~/.fzflist/commands.txt
+  done | sort | uniq >> $tmpfile
+  cat $tmpfile > ~/.fzflist/commands.txt
+  rm $tmpfile
 }
 
 function update-directories() {

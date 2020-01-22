@@ -25,7 +25,7 @@ heroku container:login
 yarn add --dev
 yarn install
 docker container exec -it CONTAINER_ID /bin/bash
-echo-git-repository-status
+git-echo-repository-status
 docker-compose exec application bash
 docker-compose exec db bash
 circleci config validate
