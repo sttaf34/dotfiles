@@ -1,0 +1,22 @@
+# ~/Projects 下のリポジトリの現在状況を一覧表示
+function git-echo-repository-status() {
+  find ~/Projects -mindepth 1 -maxdepth 1 -type d | sort | while read line
+  do
+    cd $line
+    git fetch
+    if [ "$(__git_ps1)" != " (master=)" ] ; then
+      printf "\033[35m$(pwd)\033[m\n" | tr '\n' ' '
+      printf "\033[33m$(__git_ps1)\033[m\n"
+    fi
+  done
+}
+
+# ~/Projects 下のリポジトリでフックが設定されているものを表示
+function git-echo-hooks() {
+  find ~/Projects -mindepth 1 -maxdepth 1 -type d | sort | while read line
+  do
+    find $line/.git/hooks \
+      -mindepth 1 -maxdepth 1 \
+      -not -path "*.sample"
+  done
+}

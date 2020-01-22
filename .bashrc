@@ -26,26 +26,6 @@ else
   export PS1="\[\e[1;32m\][\w]\[\e[00m\]\[\e[1;33m\]\$(__git_ps1)\[\e[00m\]"$'\n\$ '
 fi
 
-if [ -f ~/Projects/dotfiles/.bashrc_alias ]; then
-  source ~/Projects/dotfiles/.bashrc_alias
-fi
-
-if [ -f ~/Projects/dotfiles/.bashrc_fzf ]; then
-  source ~/Projects/dotfiles/.bashrc_fzf
-fi
-
-# history設定
-export HISTIGNORE="c:f:d"
-
-# ~/Projects 下のリポジトリの現在状況を一覧表示
-function git-echo-repository-status () {
-  find ~/Projects -mindepth 1 -maxdepth 1 -type d | sort | while read line
-  do
-    cd $line
-    git fetch
-    if [ "$(__git_ps1)" != " (master=)" ] ; then
-      printf "\033[35m$(pwd)\033[m\n" | tr '\n' ' '
-      printf "\033[33m$(__git_ps1)\033[m\n"
-    fi
-  done
-}
+source ~/Projects/dotfiles/.bashrc_alias
+source ~/Projects/dotfiles/.bashrc_function
+source ~/Projects/dotfiles/.bashrc_fzf

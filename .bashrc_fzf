@@ -33,6 +33,9 @@ alias c='commands-to-fzf'
 alias d='directories-to-fzf-cd'
 alias f='files-to-fzf-code'
 
+# history設定
+export HISTIGNORE="c:f:d"
+
 function update-commands() {
   tmpfile=$(mktemp)
   cat ~/Projects/dotfiles/fzf_manual_commands.txt > $tmpfile
