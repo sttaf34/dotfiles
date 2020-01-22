@@ -12,6 +12,10 @@
   "files.trimTrailingWhitespace": true,
   "files.encoding":"utf8",
   "files.eol": "\n",
+  "files.associations": {
+    ".bashrc_fzf": "shellscript",
+    ".bashrc_alias": "shellscript"
+  },
 
   "editor.tabSize": 2,
   "editor.rulers": [80],

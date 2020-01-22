@@ -29,3 +29,5 @@ echo-git-repository-status
 docker-compose exec application bash
 docker-compose exec db bash
 circleci config validate
+docker network ls
+docker network inspect NETWORK_ID
