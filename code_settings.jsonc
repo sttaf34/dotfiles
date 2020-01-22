@@ -47,6 +47,7 @@
       "typescriptreact"
   ],
 
+  "git.confirmSync": false,
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.codeLens.authors.enabled": false,
