@@ -20,3 +20,9 @@ function git-echo-hooks() {
       -not -path "*.sample"
   done
 }
+
+# コマンドをコマンドリストに追加する用の関数
+function m() {
+  # TODO: 重複チェックする
+  echo $@ >> ~/Projects/dotfiles/fzf_manual_commands.txt
+}
