@@ -26,6 +26,6 @@ else
   export PS1="\[\e[1;32m\][\w]\[\e[00m\]\[\e[1;33m\]\$(__git_ps1)\[\e[00m\]"$'\n\$ '
 fi
 
-source ~/Projects/dotfiles/.bashrc_alias
 source ~/Projects/dotfiles/.bashrc_function
 source ~/Projects/dotfiles/.bashrc_fzf
+source ~/Projects/dotfiles/.bashrc_alias
