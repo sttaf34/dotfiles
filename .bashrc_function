@@ -21,8 +21,12 @@ function git-echo-hooks() {
   done
 }
 
-# コマンドをコマンドリストに追加する用の関数
+# コマンドをコマンドリストに重複チェックして追加する用の関数
 function m() {
-  # TODO: 重複チェックする
-  echo $@ >> ~/Projects/dotfiles/fzf_manual_commands.txt
+  local FILEPATH=~/Projects/dotfiles/fzf_manual_commands.txt
+  eval "grep \"$@\" $FILEPATH > /dev/null"
+  if [ $? = 1 ]; then
+    echo "echo \"$@\" >> $FILEPATH"
+    echo $@ >> $FILEPATH
+  fi
 }
