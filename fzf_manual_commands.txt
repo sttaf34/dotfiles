@@ -32,3 +32,5 @@ circleci config validate
 docker network ls
 docker network inspect NETWORK_ID
 git-echo-hooks
+osascript -e 'tell application "Finder" to sleep'
+
