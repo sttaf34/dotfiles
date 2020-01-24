@@ -14,6 +14,7 @@
   "files.eol": "\n",
   "files.associations": {
     ".bashrc_alias": "shellscript",
+    ".bashrc_color": "shellscript",
     ".bashrc_function": "shellscript",
     ".bashrc_fzf": "shellscript"
   },
