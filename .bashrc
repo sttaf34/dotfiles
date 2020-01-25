@@ -13,16 +13,18 @@ if [ $(uname) = "Darwin" ] ; then
   eval "$(nodenv init -)"
 fi
 
-# 色定義
-source ~/Projects/dotfiles/.bashrc_color
-
-# ブロンプト -> http://babyp.blog55.fc2.com/blog-entry-663.html
+# プロンプト用のGitの設定
 source ~/Projects/Documents/Commands/git/git-prompt.sh
 source ~/Projects/Documents/Commands/git/git-completion.bash
 GIT_PS1_SHOWUPSTREAM=true
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
+
+# 色定義
+source ~/Projects/dotfiles/.bashrc_color
+
+# ブロンプト -> https://qiita.com/white_aspara25/items/935d789ec6b242e37e87
 if [ $(uname) = "Darwin" ] ; then
   export PS1="${_GREEN}[\w]${_RESET}${_YELLOW}\$(__git_ps1)${_RESET}\n\$ "
 else
