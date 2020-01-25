@@ -13,10 +13,7 @@
   "files.encoding":"utf8",
   "files.eol": "\n",
   "files.associations": {
-    ".bashrc_alias": "shellscript",
-    ".bashrc_color": "shellscript",
-    ".bashrc_function": "shellscript",
-    ".bashrc_fzf": "shellscript"
+    ".bashrc_*": "shellscript",
   },
 
   "editor.tabSize": 2,

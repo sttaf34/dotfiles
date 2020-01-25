@@ -15,3 +15,7 @@ _YELLOW="\[$(tput setaf 11)\]"
 _PINK="\[$(tput setaf 13)\]"
 _ORANGE="\[$(tput setaf 209)\]"
 _RESET="\[$(tput sgr0)\]"
+
+# 色の表がある -> http://nemoplus.hateblo.jp/entry/20090119/1232373540
+export CLICOLOR=1
+export LSCOLORS=fxGxbxdxbxegedabagacad
