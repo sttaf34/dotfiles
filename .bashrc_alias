@@ -10,6 +10,8 @@ alias rm='gmv -f --backup=numbered --target-directory ~/.Trash/'
 alias ls='ls -hF'
 alias la='ls -a'
 alias ll='ls -l'
+alias lla='ls -la'
+alias lal='ls -la'
 
 alias g='git'
 alias start='open'

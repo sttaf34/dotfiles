@@ -3,7 +3,9 @@
   email = sttaf34@gmail.com
 
 [alias]
-  l = log
+  l = log --oneline
+  ll = log --stat
+  lll = log -p
   a = add
   st = status
   cm = commit
@@ -12,6 +14,7 @@
   co = checkout
   unstage = reset HEAD
   br = branch -v
+  f = fetch
   tree = log --graph --pretty=format:'%x09%C(yellow)%h  %C(cyan)%ar %x09%C(magenta)%d%Creset %s'
 
 [core]
