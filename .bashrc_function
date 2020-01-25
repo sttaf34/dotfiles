@@ -21,7 +21,8 @@ function git-echo-hooks() {
   done
 }
 
-# コマンドをコマンドリストに重複チェックして追加する用の関数
+# コマンドをコマンドリストに、重複チェックしてから追加する用の関数
+# 例えば「m git remote -v」のように打つ
 function m() {
   local FILEPATH=~/Projects/dotfiles/fzf_manual_commands.txt
   eval "grep \"$@\" $FILEPATH > /dev/null"
