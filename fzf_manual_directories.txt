@@ -1,3 +1,5 @@
 ~/.fzflist
 ~/.ssh
 ~/Projects
+~/Workspace
+~/Library

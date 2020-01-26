@@ -43,7 +43,7 @@ function update-commands() {
 
 function update-directories() {
   cat ~/Projects/dotfiles/fzf_manual_directories.txt > ~/.fzflist/directories.txt;
-  find ~/Projects -maxdepth 1 -type d | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/directories.txt;
+  find ~/Projects -mindepth 1 -maxdepth 1 -type d | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/directories.txt;
   find ~/Projects/Documents -maxdepth 1 -type d | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/directories.txt;
 }
 

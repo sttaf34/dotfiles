@@ -34,3 +34,4 @@ docker network inspect NETWORK_ID
 git-echo-hooks
 osascript -e 'tell application "Finder" to sleep'
 docker-compose config
+curl ifconfig.io
