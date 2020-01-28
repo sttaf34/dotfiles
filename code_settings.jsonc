@@ -37,6 +37,12 @@
 
   "extensions.ignoreRecommendations": true,
 
+  "git.confirmSync": false,
+
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // 以降は Extensions の設定
   "eslint.enable": true,
   "eslint.alwaysShowStatus": true,
   "eslint.validate": [
@@ -46,12 +52,10 @@
       "typescriptreact"
   ],
 
-  "git.confirmSync": false,
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
 
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "todo-tree.highlights.enabled": false
 }
