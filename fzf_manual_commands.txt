@@ -36,3 +36,4 @@ osascript -e 'tell application "Finder" to sleep'
 docker-compose config
 curl ifconfig.io
 lsof -n -P -iTCP -sTCP:LISTEN
+ps aux | head -1 && ps aux | grep ssh
