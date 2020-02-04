@@ -1,11 +1,16 @@
 tap "beeftornado/rmtree"
 tap "heroku/brew"
 tap "homebrew/bundle"
+tap "homebrew/cask"
 tap "homebrew/core"
 
+brew "autossh"
 brew "circleci"
+brew "cocoapods"
 brew "coreutils"
 brew "fzf"
 brew "git"
 brew "mysql-client"
 brew "heroku/brew/heroku"
+
+cask "google-japanese-ime"
