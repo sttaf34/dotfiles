@@ -44,12 +44,12 @@ function update-commands() {
 function update-directories() {
   cat ~/Projects/dotfiles/fzf_manual_directories.txt > ~/.fzflist/directories.txt;
   find ~/Projects -mindepth 1 -maxdepth 1 -type d | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/directories.txt;
-  find ~/Projects/Documents -maxdepth 1 -type d | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/directories.txt;
+  find ~/Projects/note -maxdepth 1 -type d | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/directories.txt;
 }
 
 function update-files() {
   cat ~/Projects/dotfiles/fzf_manual_files.txt > ~/.fzflist/files.txt;
-  find ~/Projects/Documents -maxdepth 3 -not -path "*/.git/*" -type f | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/files.txt;
+  find ~/Projects/note -maxdepth 3 -not -path "*/.git/*" -type f | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/files.txt;
   find ~/Projects/dotfiles -maxdepth 2 -not -path "*/.git/*" -type f | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/files.txt;
   find ~/.fzflist -maxdepth 1 -type f | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/files.txt;
 }
