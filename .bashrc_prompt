@@ -1,7 +1,7 @@
 
 # プロンプト用のGitの設定
-source ~/Projects/Documents/Commands/git/git-prompt.sh
-source ~/Projects/Documents/Commands/git/git-completion.bash
+source ~/Projects/note/command/git/git-prompt.sh
+source ~/Projects/note/command/git/git-completion.bash
 GIT_PS1_SHOWUPSTREAM=true
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
