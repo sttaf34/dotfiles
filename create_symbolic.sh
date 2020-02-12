@@ -8,4 +8,4 @@ ln -s ~/Projects/dotfiles/.inputrc ~/.inputrc
 ln -s ~/Projects/dotfiles/karabiner ~/.config
 
 ln -s ~/Projects/dotfiles/code_settings.jsonc ~/Library/Application\ Support/Code/User/settings.json
-ln -s ~/Projects/dotfiles/code_keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+ln -s ~/Projects/dotfiles/code_keybindings.jsonc ~/Library/Application\ Support/Code/User/keybindings.json

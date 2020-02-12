@@ -1,4 +1,5 @@
 [
+  // Editor
   {
       "key": "ctrl+shift+a",
       "command": "cursorHomeSelect",
@@ -8,6 +9,29 @@
       "command": "cursorEndSelect",
       "when": "editorTextFocus"
   },{
+    "key": "alt+o",
+    "command": "cursorPageUp",
+    "when": "editorTextFocus"
+  },{
+    "key": "alt+.",
+    "command": "cursorPageDown",
+    "when": "editorTextFocus"
+  },{
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor",
+    "when": "editorTextFocus"
+  },{
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor",
+    "when": "editorTextFocus"
+  },{
+    "key": "command+space",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+
+  // Terminal
+  {
       "key": "shift+cmd+]",
       "command": "workbench.action.terminal.focusNext",
       "when": "terminalFocus"
@@ -22,7 +46,10 @@
   },{
       "key": "alt+t",
       "command": "workbench.action.terminal.toggleTerminal"
-  },{
+  },
+
+  // Explorer
+  {
       "key": "cmd+o",
       "command": "list.select",
       "when": "explorerViewletFocus && listFocus && explorerViewletVisible && !inputFocus"
@@ -30,24 +57,5 @@
       "key": "cmd+n",
       "command": "explorer.newFile",
       "when": "explorerViewletFocus && listFocus && explorerViewletVisible && !inputFocus"
-  },{
-      "key": "alt+o",
-      "command": "cursorPageUp",
-      "when": "editorTextFocus"
-  },{
-      "key": "alt+.",
-      "command": "cursorPageDown",
-      "when": "editorTextFocus"
-  },{
-      "key": "ctrl+alt+t",
-      "command": "workbench.action.togglePanelPosition"
-  },{
-      "key": "ctrl+tab",
-      "command": "workbench.action.nextEditor",
-      "when": "editorTextFocus"
-  },{
-      "key": "ctrl+shift+tab",
-      "command": "workbench.action.previousEditor",
-      "when": "editorTextFocus"
   }
 ]
