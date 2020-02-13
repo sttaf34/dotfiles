@@ -25,7 +25,7 @@
     "command": "workbench.action.previousEditor",
     "when": "editorTextFocus"
   },{
-    "key": "command+space",
+    "key": "alt+space", // デフォルトの ctrl+space は Spotlight なので
     "command": "editor.action.triggerSuggest",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
   },
@@ -46,6 +46,9 @@
   },{
       "key": "alt+t",
       "command": "workbench.action.terminal.toggleTerminal"
+  },{
+    "key": "ctrl+shift+[Equal]", // ^
+    "command": "workbench.action.terminal.newInActiveWorkspace"
   },
 
   // Explorer
