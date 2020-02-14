@@ -38,21 +38,23 @@ export HISTIGNORE="c:f:d"
 
 function update-commands() {
   cat ~/Projects/dotfiles/fzf_manual_commands.txt > ~/.fzflist/commands.txt;
-  find ~/Projects -mindepth 1 -maxdepth 1 -type d | sed -e "s@/Users/kawa@code -a ~@" >> ~/.fzflist/commands.txt;
+  (cd ~/Projects && find . -mindepth 1 -maxdepth 1 -type d)  | sed -e "s@^.@code -a ~/Projects@" >> ~/.fzflist/commands.txt;
+  (cd ~/Workspace && find . -mindepth 1 -maxdepth 1 -type d) | sed -e "s@^.@code -a ~/Workspace@" >> ~/.fzflist/commands.txt;
 }
 
 function update-directories() {
   cat ~/Projects/dotfiles/fzf_manual_directories.txt > ~/.fzflist/directories.txt;
-  find ~/Projects -mindepth 1 -maxdepth 1 -type d | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/directories.txt;
-  find ~/Projects/note -maxdepth 1 -type d | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/directories.txt;
+  (cd ~/Projects && find . -mindepth 1 -maxdepth 1 -type d)      | sed -e "s@^.@~/Projects@" >> ~/.fzflist/directories.txt;
+  (cd ~/Projects/note && find . -mindepth 1 -maxdepth 1 -type d) | sed -e "s@^.@~/Projects/note@" >> ~/.fzflist/directories.txt;
+  (cd ~/Workspace && find . -maxdepth 2 -type d)                 | sed -e "s@^.@~/Workspace@" >> ~/.fzflist/directories.txt;
 }
 
 function update-files() {
   cat ~/Projects/dotfiles/fzf_manual_files.txt > ~/.fzflist/files.txt;
-  find ~/Projects/note -maxdepth 3 -not -path "*/.git/*" -type f | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/files.txt;
-  git ls-files ~/Projects/note-typescript | sed -e "s@^@~/Projects/note-typescript/@" >> ~/.fzflist/files.txt;
-  find ~/Projects/dotfiles -maxdepth 2 -not -path "*/.git/*" -type f | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/files.txt;
-  find ~/.fzflist -maxdepth 1 -type f | sed -e "s@/Users/kawa@~@" >> ~/.fzflist/files.txt;
+  (cd ~/Projects/note && git ls-files)            | sed -e "s@^@~/Projects/note/@" >> ~/.fzflist/files.txt;
+  (cd ~/Projects/note-typescript && git ls-files) | sed -e "s@^@~/Projects/note-typescript/@" >> ~/.fzflist/files.txt;
+  (cd ~/Projects/dotfiles && git ls-files)        | sed -e "s@^@~/Projects/dotfiles/@" >> ~/.fzflist/files.txt;
+  (cd ~/.fzflist && find . -maxdepth 1 -type f)   | sed -e "s@^.@~/.fzflist@" >> ~/.fzflist/files.txt;
 }
 
 update-commands
