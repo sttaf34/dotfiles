@@ -2,6 +2,9 @@
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Default Dark+",
   "workbench.editor.enablePreview": false,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.limit.value": 5,
 
   "window.zoomLevel": 0,
 
