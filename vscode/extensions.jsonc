@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "lixquid.calculator",
+    "eamodio.gitlens",
+    "gruntfuggly.todo-tree",
+    "andyyaldoo.vscode-json",
+    "dbaeumer.vscode-eslint",
+    "mechatroner.rainbow-csv"
+  ]
+}
