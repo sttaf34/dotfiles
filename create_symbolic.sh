@@ -7,5 +7,5 @@ ln -s ~/Projects/dotfiles/.inputrc ~/.inputrc
 # ディレクトリごとシンボリックにする必要あり
 ln -s ~/Projects/dotfiles/karabiner ~/.config
 
-ln -s ~/Projects/dotfiles/code_settings.jsonc ~/Library/Application\ Support/Code/User/settings.json
-ln -s ~/Projects/dotfiles/code_keybindings.jsonc ~/Library/Application\ Support/Code/User/keybindings.json
+ln -s ~/Projects/dotfiles/vscode/settings.jsonc ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/Projects/dotfiles/vscode/keybindings.jsonc ~/Library/Application\ Support/Code/User/keybindings.json
