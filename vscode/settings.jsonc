@@ -25,7 +25,6 @@
   "editor.lineHeight": 25,
   "editor.lineNumbers": "on",
   "editor.fontFamily": "Ricty",
-  "editor.letterSpacing": -0.5,
   "editor.minimap.enabled": false,
   "editor.cursorBlinking": "solid",
   "editor.renderIndentGuides": false,
