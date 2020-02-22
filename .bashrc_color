@@ -1,4 +1,6 @@
 # https://wiki.archlinux.jp/index.php/Bash
+# https://wiki.archlinux.jp/index.php/Bash/ブロンプトのカスタマイズ
+# https://misc.flogisoft.com/bash/tip_colors_and_formatting
 
 # 黒背景で見やすい色を定義しておく
 RED="$(tput setaf 9)"
