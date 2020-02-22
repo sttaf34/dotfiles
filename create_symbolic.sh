@@ -1,4 +1,4 @@
-ln -s ~/Projects/dotfiles/.bashrc ~/.bashrc
+ln -s ~/Projects/dotfiles/bashrc/.bashrc ~/.bashrc
 ln -s ~/Projects/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/Projects/dotfiles/.inputrc ~/.inputrc
 
