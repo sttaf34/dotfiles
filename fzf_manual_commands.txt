@@ -6,7 +6,9 @@ npx gatsby develop
 npx gatsby develop -H 0.0.0.0
 git add . && git cmm
 grm -rf ~/.Trash/*
-serve ~/Projects/note/htmlcss
+cd ~/Projects/note/htmlcss && browser-sync start --server --files "*"
+cd ~/Projects/note/javascript && browser-sync start --server --files "*"
+cd ~/Projects/note/jquery && browser-sync start --server --files "*"
 echo $PATH | tr ':' '\n'
 nodenv versions
 docker image ls
