@@ -33,6 +33,7 @@ docker-compose exec db bash
 circleci config validate
 docker network ls
 docker network inspect NETWORK_ID
+docker-machine ip
 git-echo-hooks
 osascript -e 'tell application "Finder" to sleep'
 docker-compose config
