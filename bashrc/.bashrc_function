@@ -5,8 +5,10 @@ function git-echo-repository-status() {
     cd $line
     git fetch
     if [ "$(__git_ps1)" != " (master=)" -a "$(__git_ps1)" != " (master)" ] ; then
-      printf "\033[35m$(pwd)\033[m\n" | tr '\n' ' '
-      printf "\033[33m$(__git_ps1)\033[m\n"
+      printf "${PINK}$(pwd)${RESET}\n" | tr '\n' ' '
+      printf "${YELLOW}"
+      echo "$(__git_ps1)" | tr '\n' ' '
+      printf "${RESET}\n"
     fi
   done
 }
