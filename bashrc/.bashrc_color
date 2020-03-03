@@ -3,10 +3,13 @@
 # https://misc.flogisoft.com/bash/tip_colors_and_formatting
 
 # 黒背景で見やすい色を定義しておく
+# echo "${PURPLE}[ABC]${RED}[ABC]${GREEN}[ABC]${YELLOW}[ABC]${RESET}"
+# echo "${PINK}[ABC]${WATER}[ABC]${ORANGE}[ABC]${RESET}"
 RED="$(tput setaf 9)"
 GREEN="$(tput setaf 10)"
 YELLOW="$(tput setaf 11)"
 PINK="$(tput setaf 13)"
+WATER="$(tput setaf 87)"
 ORANGE="$(tput setaf 209)"
 RESET="$(tput sgr0)"
 
@@ -15,6 +18,7 @@ _RED="\[$(tput setaf 9)\]"
 _GREEN="\[$(tput setaf 10)\]"
 _YELLOW="\[$(tput setaf 11)\]"
 _PINK="\[$(tput setaf 13)\]"
+_WATER="\[$(tput setaf 14)\]"
 _ORANGE="\[$(tput setaf 209)\]"
 _RESET="\[$(tput sgr0)\]"
 
