@@ -1,0 +1,8 @@
+alias cp='cp -n -v'
+alias mv='mv -n -v'
+alias ls='ls -hF'
+alias la='ls -a'
+alias ll='ls -l'
+alias lla='ls -la'
+alias lal='ls -la'
+alias grep='grep --color=auto'
