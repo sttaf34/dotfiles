@@ -1,64 +1,83 @@
 [
   // Editor
   {
-      "key": "ctrl+shift+a",
-      "command": "cursorHomeSelect",
-      "when": "editorTextFocus"
-  },{
-      "key": "ctrl+shift+e",
-      "command": "cursorEndSelect",
-      "when": "editorTextFocus"
-  },{
+    "key": "ctrl+shift+a",
+    "command": "cursorHomeSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "cursorEndSelect",
+    "when": "editorTextFocus"
+  },
+  {
     "key": "alt+o",
     "command": "cursorPageUp",
     "when": "editorTextFocus"
-  },{
+  },
+  {
     "key": "alt+.",
     "command": "cursorPageDown",
     "when": "editorTextFocus"
-  },{
+  },
+  {
     "key": "ctrl+tab",
     "command": "workbench.action.nextEditor",
     "when": "editorTextFocus"
-  },{
+  },
+  {
     "key": "ctrl+shift+tab",
     "command": "workbench.action.previousEditor",
     "when": "editorTextFocus"
-  },{
+  },
+  {
     "key": "alt+space", // デフォルトの ctrl+space は Spotlight なので
     "command": "editor.action.triggerSuggest",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
   },
-
   // Terminal
   {
-      "key": "shift+cmd+]",
-      "command": "workbench.action.terminal.focusNext",
-      "when": "terminalFocus"
-  },{
-      "key": "shift+cmd+[",
-      "command": "workbench.action.terminal.focusPrevious",
-      "when": "terminalFocus"
-  },{
-      "key": "cmd+w",
-      "command": "workbench.action.terminal.kill",
-      "when": "terminalFocus"
-  },{
-      "key": "alt+t",
-      "command": "workbench.action.terminal.toggleTerminal"
-  },{
+    "key": "shift+cmd+]",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+cmd+[",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
     "key": "ctrl+shift+[Equal]", // ^
     "command": "workbench.action.terminal.newInActiveWorkspace"
   },
-
+  {
+    "key": "cmd+left",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+right",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
   // Explorer
   {
-      "key": "cmd+o",
-      "command": "list.select",
-      "when": "explorerViewletFocus && listFocus && explorerViewletVisible && !inputFocus"
-  },{
-      "key": "cmd+n",
-      "command": "explorer.newFile",
-      "when": "explorerViewletFocus && listFocus && explorerViewletVisible && !inputFocus"
+    "key": "cmd+o",
+    "command": "list.select",
+    "when": "explorerViewletFocus && listFocus && explorerViewletVisible && !inputFocus"
+  },
+  {
+    "key": "cmd+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus && listFocus && explorerViewletVisible && !inputFocus"
   }
 ]
