@@ -44,9 +44,10 @@ function update-commands() {
 
 function update-directories() {
   cat ~/Projects/dotfiles/fzf_manual_directories.txt > ~/.fzflist/directories.txt;
-  (cd ~/Projects && find . -mindepth 1 -maxdepth 1 -type d)      | sed -e "s@^.@~/Projects@" >> ~/.fzflist/directories.txt;
-  (cd ~/Projects/note && find . -mindepth 1 -maxdepth 1 -type d) | sed -e "s@^.@~/Projects/note@" >> ~/.fzflist/directories.txt;
-  (cd ~/Workspace && find . -maxdepth 2 -type d)                 | sed -e "s@^.@~/Workspace@" >> ~/.fzflist/directories.txt;
+  (cd ~/Projects && find . -mindepth 1 -maxdepth 1 -type d)               | sed -e "s@^.@~/Projects@" >> ~/.fzflist/directories.txt;
+  (cd ~/Projects/note && find . -mindepth 1 -maxdepth 2 -type d)          | sed -e "s@^.@~/Projects/note@" >> ~/.fzflist/directories.txt;
+  (cd ~/Projects/note-express && find . -mindepth 1 -maxdepth 1 -type d)  | sed -e "s@^.@~/Projects/note-express@" >> ~/.fzflist/directories.txt;
+  (cd ~/Workspace && find . -maxdepth 2 -type d)                          | sed -e "s@^.@~/Workspace@" >> ~/.fzflist/directories.txt;
 }
 
 function update-files() {
