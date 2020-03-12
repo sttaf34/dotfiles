@@ -13,10 +13,10 @@
   "terminal.integrated.rendererType": "canvas",
 
   "files.trimTrailingWhitespace": true,
-  "files.encoding":"utf8",
+  "files.encoding": "utf8",
   "files.eol": "\n",
   "files.associations": {
-    ".bashrc_*": "shellscript",
+    ".bashrc_*": "shellscript"
   },
 
   "editor.tabSize": 2,
