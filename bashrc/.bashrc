@@ -9,6 +9,8 @@ if [ $(uname) = "Darwin" ] ; then
   eval "$(nodenv init -)"
 fi
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 source ~/Projects/dotfiles/bashrc/.bashrc_color
 source ~/Projects/dotfiles/bashrc/.bashrc_prompt
 source ~/Projects/dotfiles/bashrc/.bashrc_function
