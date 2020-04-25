@@ -41,3 +41,4 @@ curl ifconfig.io
 lsof -n -P -iTCP -sTCP:LISTEN
 ps aux | head -1 && ps aux | grep ssh
 git remote -v
+yarn develop
