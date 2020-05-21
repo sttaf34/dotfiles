@@ -7,7 +7,7 @@
     "dbaeumer.vscode-eslint",
     "mechatroner.rainbow-csv",
     "msjsdiag.debugger-for-chrome",
-    "ms-vscode-remote.remote-ssh",
-    "sleistner.vscode-fileutils"
+    "sleistner.vscode-fileutils",
+    "alefragnani.bookmarks"
   ]
 }
