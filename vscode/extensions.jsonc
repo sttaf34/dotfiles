@@ -8,6 +8,7 @@
     "mechatroner.rainbow-csv",
     "msjsdiag.debugger-for-chrome",
     "sleistner.vscode-fileutils",
-    "alefragnani.bookmarks"
+    "alefragnani.bookmarks",
+    "stylelint.vscode-stylelint"
   ]
 }

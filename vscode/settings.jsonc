@@ -30,7 +30,8 @@
   "editor.renderIndentGuides": false,
   "editor.renderWhitespace": "boundary",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
   },
 
   "explorer.confirmDragAndDrop": false,
