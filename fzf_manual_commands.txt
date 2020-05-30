@@ -46,3 +46,4 @@ sudo networksetup -setsocksfirewallproxystate Wi-Fi on
 sudo networksetup -setsocksfirewallproxystate Wi-Fi off
 open -a 'Google Chrome' https://ifconfig.io
 cd /Users/kawa/Projects/note-typescript && yarn ts-node
+cd /c/Users/stride29/Projects/note/php && php -S localhost:9000
