@@ -2,8 +2,8 @@ source ~/.bashrc
 nodenv rehash
 ifconfig | grep 192.168
 history | tail -10
-npx gatsby develop
-npx gatsby develop -H 0.0.0.0
+
+
 git add . && git cmm
 grm -rf ~/.Trash/*
 cd ~/Projects/note/htmlcss && browser-sync start --server --files "*"
@@ -24,7 +24,6 @@ docker-compose down
 docker-compose build --no-cache
 heroku login
 heroku container:login
-yarn add --dev
 yarn install
 docker container exec -it CONTAINER_ID /bin/bash
 git-echo-repository-status
@@ -45,5 +44,5 @@ yarn develop
 sudo networksetup -setsocksfirewallproxystate Wi-Fi on
 sudo networksetup -setsocksfirewallproxystate Wi-Fi off
 open -a 'Google Chrome' https://ifconfig.io
-cd /Users/kawa/Projects/note-typescript && yarn ts-node
-cd /c/Users/stride29/Projects/note/php && php -S localhost:9000
+cd ~/Projects/note-typescript && yarn ts-node
+cd ~/Projects/note/php && php -S localhost:9000

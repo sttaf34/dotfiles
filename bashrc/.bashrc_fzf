@@ -54,6 +54,7 @@ function update-files() {
   (cd ~/Projects/secret && git ls-files)          | sed -e "s@^@~/Projects/secret/@" >> ~/.fzflist/files.txt;
   (cd ~/Projects/note && git ls-files)            | sed -e "s@^@~/Projects/note/@" >> ~/.fzflist/files.txt;
   (cd ~/Projects/note-typescript && git ls-files) | sed -e "s@^@~/Projects/note-typescript/@" >> ~/.fzflist/files.txt;
+  (cd ~/Projects/note-react && git ls-files)      | sed -e "s@^@~/Projects/note-react/@" >> ~/.fzflist/files.txt;
   (cd ~/Projects/dotfiles && git ls-files)        | sed -e "s@^@~/Projects/dotfiles/@" >> ~/.fzflist/files.txt;
   (cd ~/.fzflist && find . -maxdepth 1 -type f)   | sed -e "s@^.@~/.fzflist@" >> ~/.fzflist/files.txt;
 }
