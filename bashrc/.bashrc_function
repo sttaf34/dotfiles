@@ -33,3 +33,10 @@ function m() {
     echo $@ >> $FILEPATH
   fi
 }
+
+function return-home-routine() {
+  date +%F | tr '\n' ' ' >> /tmp/ip_address_history
+  curl -s ifconfig.io >> /tmp/ip_address_history
+
+  git-echo-repository-status
+}
