@@ -39,14 +39,12 @@ export HISTIGNORE="c:f:d"
 function update-commands() {
   cat ~/Projects/dotfiles/fzf_manual_commands.txt > ~/.fzflist/commands.txt;
   (cd ~/Projects && find . -mindepth 1 -maxdepth 1 -type d)  | sed -e "s@^.@code -a ~/Projects@" >> ~/.fzflist/commands.txt;
-  (cd ~/Workspace && find . -mindepth 1 -maxdepth 1 -type d) | sed -e "s@^.@code -a ~/Workspace@" >> ~/.fzflist/commands.txt;
 }
 
 function update-directories() {
   cat ~/Projects/dotfiles/fzf_manual_directories.txt > ~/.fzflist/directories.txt;
   (cd ~/Projects && find . -mindepth 1 -maxdepth 1 -type d)               | sed -e "s@^.@~/Projects@" >> ~/.fzflist/directories.txt;
   (cd ~/Projects/note && find . -mindepth 1 -maxdepth 2 -type d)          | sed -e "s@^.@~/Projects/note@" >> ~/.fzflist/directories.txt;
-  (cd ~/Workspace && find . -maxdepth 2 -type d)                          | sed -e "s@^.@~/Workspace@" >> ~/.fzflist/directories.txt;
 }
 
 function update-files() {
