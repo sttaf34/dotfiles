@@ -40,3 +40,11 @@ function return-home-routine() {
 
   git-echo-repository-status
 }
+
+function ipv4_to_binary() {
+  echo "$@" | tr '.' '\n' | while read line
+  do
+    echo "obase=2;ibase=10;$line" | bc | printf "%08d " $(cat)
+  done
+  printf "\n"
+}
