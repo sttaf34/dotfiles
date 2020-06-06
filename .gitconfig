@@ -25,6 +25,3 @@
 
 [fetch]
   prune = true
-
-[init]
-  templatedir = ~/Projects/dotfiles/.git_template/
