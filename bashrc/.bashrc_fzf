@@ -38,7 +38,9 @@ export HISTIGNORE="c:f:d"
 
 function update-commands() {
   cat ~/Projects/dotfiles/fzf_manual_commands.txt > ~/.fzflist/commands.txt;
-  (cd ~/Projects && find . -mindepth 1 -maxdepth 1 -type d)  | sed -e "s@^.@code -a ~/Projects@" >> ~/.fzflist/commands.txt;
+  find ~/Projects -mindepth 1 -maxdepth 1 -not -name ".*" -type d | awk '{print "cd " $0 " && code -a ."}' >> ~/.fzflist/commands.txt;
+  find ~/Projects/note-next -mindepth 1 -maxdepth 1 -not -name ".*" -type d | awk '{print "cd " $0 " && code -a ."}' >> ~/.fzflist/commands.txt;
+  find ~/Projects/note-express -mindepth 1 -maxdepth 1 -not -name ".*" -type d | awk '{print "cd " $0 " && code -a ."}' >> ~/.fzflist/commands.txt;
 }
 
 function update-directories() {
