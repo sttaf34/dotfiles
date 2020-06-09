@@ -3,8 +3,8 @@
   email = sttaf34@gmail.com
 
 [alias]
-  l = log --oneline
-  ll = log --stat
+  l = log --oneline --decorate --graph --date=format:'%Y/%m/%d' --pretty='%C(cyan)%ad%C(auto) %h %s %d'
+  ll = log --stat --decorate --date=format:'%Y/%m/%d' --pretty='%n- %C(cyan)%ad%C(auto) %h %s %d'
   lll = log -p
   a = add
   st = status
