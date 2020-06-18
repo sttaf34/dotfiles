@@ -42,6 +42,8 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
 
+  "debug.javascript.codelens.npmScripts": "never",
+
   // 以降は Extensions の設定
   "eslint.enable": true,
   "eslint.alwaysShowStatus": true,
