@@ -13,6 +13,9 @@ alias ll='ls -l'
 alias lla='ls -la'
 alias lal='ls -la'
 
+# 隠しファイルのみ表示
+alias lao='ls -ld .[^.]*'
+
 alias g='git'
 alias start='open'
 alias gst='git branch -avv && echo '' && git status'
