@@ -12,5 +12,7 @@ brew "fzf"
 brew "git"
 brew "mysql-client"
 brew "heroku/brew/heroku"
+brew "jq"
 
 cask "google-japanese-ime"
+cask "alt-tab"
