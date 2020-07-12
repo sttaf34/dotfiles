@@ -46,3 +46,4 @@ open -a 'Google Chrome' https://ifconfig.io
 cd ~/Projects/note-typescript && yarn ts-node
 php -S localhost:9000
 less /tmp/ip_address_history
+yarn upgrade --latest
