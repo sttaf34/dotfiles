@@ -40,10 +40,8 @@ function update-commands() {
   cat ~/Projects/dotfiles/fzf_manual_commands.txt > ~/.fzflist/commands.txt;
   (cd && find ./Projects -mindepth 1 -maxdepth 1 -not -name ".*" -type d | sed -e "s@^.@~@") | awk '{print "cd " $0 " && code -a . "}' >> ~/.fzflist/commands.txt;
   (cd && find ./Projects -mindepth 1 -maxdepth 1 -not -name ".*" -type d | sed -e "s@^.@~@") | awk '{print "code " $0 }' >> ~/.fzflist/commands.txt;
-  (cd && find ./Projects/note-next -mindepth 1 -maxdepth 1 -not -name ".*" -type d | sed -e "s@^.@~@") | awk '{print "cd " $0 " && code -a . "}' >> ~/.fzflist/commands.txt;
   (cd && find ./Projects/note-next -mindepth 1 -maxdepth 1 -not -name ".*" -type d | sed -e "s@^.@~@") | awk '{print "code " $0 }' >> ~/.fzflist/commands.txt;
-  (cd && find ./Projects/note-express -mindepth 1 -maxdepth 1 -not -name ".*" -type d | sed -e "s@^.@~@") | awk '{print "cd " $0 " && code -a . "}' >> ~/.fzflist/commands.txt;
-  (cd && find ./Projects/note-express -mindepth 1 -maxdepth 1 -not -name ".*" -type d | sed -e "s@^.@~@") | awk '{print "code " $0 }' >> ~/.fzflist/commands.txt;
+  (cd && find ./Projects/note-project-private -mindepth 1 -maxdepth 1 -not -name ".*" -type d | sed -e "s@^.@~@") | awk '{print "code " $0 }' >> ~/.fzflist/commands.txt;
 }
 
 function update-directories() {
