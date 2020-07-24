@@ -1,14 +1,13 @@
 {
   "recommendations": [
     "lixquid.calculator",
-    "eamodio.gitlens",
-    "gruntfuggly.todo-tree",
     "andyyaldoo.vscode-json",
     "dbaeumer.vscode-eslint",
+    "sleistner.vscode-fileutils",
+
     "mechatroner.rainbow-csv",
     "msjsdiag.debugger-for-chrome",
-    "sleistner.vscode-fileutils",
-    "alefragnani.bookmarks",
-    "stylelint.vscode-stylelint"
+    "stylelint.vscode-stylelint",
+    "eamodio.gitlens"
   ]
 }

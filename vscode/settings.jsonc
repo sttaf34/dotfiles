@@ -58,6 +58,4 @@
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
-
-  "todo-tree.highlights.enabled": false,
 }
