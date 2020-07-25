@@ -1,5 +1,7 @@
 [
+  //
   // Editor
+  //
   {
     "key": "ctrl+shift+a",
     "command": "cursorHomeSelect",
@@ -35,7 +37,10 @@
     "command": "editor.action.triggerSuggest",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
   },
+
+  //
   // Terminal
+  //
   {
     "key": "shift+cmd+]",
     "command": "workbench.action.terminal.focusNext",
@@ -59,17 +64,10 @@
     "key": "ctrl+shift+[Equal]", // ^
     "command": "workbench.action.terminal.newInActiveWorkspace"
   },
-  {
-    "key": "cmd+left",
-    "command": "workbench.action.terminal.focusPreviousPane",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "cmd+right",
-    "command": "workbench.action.terminal.focusNextPane",
-    "when": "terminalFocus"
-  },
+
+  //
   // Explorer
+  //
   {
     "key": "cmd+o",
     "command": "list.select",
