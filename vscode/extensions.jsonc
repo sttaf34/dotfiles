@@ -5,6 +5,7 @@
     "dbaeumer.vscode-eslint",
     "sleistner.vscode-fileutils",
     "shardulm94.trailing-spaces",
-    "mechatroner.rainbow-csv"
+    "mechatroner.rainbow-csv",
+    "streetsidesoftware.code-spell-checker"
   ]
 }
