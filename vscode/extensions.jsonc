@@ -4,10 +4,10 @@
     "andyyaldoo.vscode-json",
     "dbaeumer.vscode-eslint",
     "sleistner.vscode-fileutils",
-
+    "shardulm94.trailing-spaces",
     "mechatroner.rainbow-csv",
+
     "msjsdiag.debugger-for-chrome",
-    "stylelint.vscode-stylelint",
-    "eamodio.gitlens"
+    "stylelint.vscode-stylelint"
   ]
 }
