@@ -1,49 +1,30 @@
 return-home-routine
 git-echo-repository-status
+yarn develop
+yarn install
+yarn upgrade --latest
 source ~/.bashrc
 nodenv rehash
 ifconfig | grep 192.168
 history | tail -10
 git add . && git cmm
-grm -rf ~/.Trash/*
 cd ~/Projects/note/htmlcss && browser-sync start --server --files "*"
 cd ~/Projects/note/javascript && browser-sync start --server --files "*"
 cd ~/Projects/note/jquery && browser-sync start --server --files "*"
 echo $PATH | tr ':' '\n'
 nodenv versions
-docker image ls
-docker container ls
-docker container ls -a
 git commit --amend
 npm ls --depth=0
 npm ls -g --depth=0
-docker container ls -aq | xargs docker container rm
-docker image ls -aq | xargs docker image rm
-docker-compose up
-docker-compose down
-docker-compose build --no-cache
-heroku login
-heroku container:login
-yarn install
-docker container exec -it CONTAINER_ID /bin/bash
-docker-compose exec application bash
-docker-compose exec db bash
-circleci config validate
-docker network ls
-docker network inspect NETWORK_ID
-docker-machine ip
 git-echo-hooks
 osascript -e 'tell application "Finder" to sleep'
-docker-compose config
 curl ifconfig.io
 lsof -n -P -iTCP -sTCP:LISTEN
 ps aux | head -1 && ps aux | grep ssh
 git remote -v
-yarn develop
 sudo networksetup -setsocksfirewallproxystate Wi-Fi on
 sudo networksetup -setsocksfirewallproxystate Wi-Fi off
 open -a 'Google Chrome' https://ifconfig.io
 cd ~/Projects/note-typescript && yarn ts-node
 php -S localhost:9000
 less /tmp/ip_address_history
-yarn upgrade --latest

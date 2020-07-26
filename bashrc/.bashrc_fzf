@@ -38,26 +38,20 @@ export HISTIGNORE="c:f:d"
 
 function update-commands() {
   cat ~/Projects/dotfiles/fzf_manual_commands.txt > ~/.fzflist/commands.txt;
-  (cd && find ./Projects -mindepth 1 -maxdepth 1 -not -name ".*" -type d | sed -e "s@^.@~@") | awk '{print "cd " $0 " && code -a . "}' >> ~/.fzflist/commands.txt;
-  (cd && find ./Projects -mindepth 1 -maxdepth 1 -not -name ".*" -type d | sed -e "s@^.@~@") | awk '{print "code " $0 }' >> ~/.fzflist/commands.txt;
-  (cd && find ./Projects/note-next -mindepth 1 -maxdepth 1 -not -name ".*" -type d | sed -e "s@^.@~@") | awk '{print "code " $0 }' >> ~/.fzflist/commands.txt;
+  (cd && find ./Projects                      -mindepth 1 -maxdepth 1 -not -name ".*" -type d | sed -e "s@^.@~@") | awk '{print "code " $0 }' >> ~/.fzflist/commands.txt;
+  (cd && find ./Projects/note-next            -mindepth 1 -maxdepth 1 -not -name ".*" -type d | sed -e "s@^.@~@") | awk '{print "code " $0 }' >> ~/.fzflist/commands.txt;
   (cd && find ./Projects/note-project-private -mindepth 1 -maxdepth 1 -not -name ".*" -type d | sed -e "s@^.@~@") | awk '{print "code " $0 }' >> ~/.fzflist/commands.txt;
 }
 
 function update-directories() {
   cat ~/Projects/dotfiles/fzf_manual_directories.txt > ~/.fzflist/directories.txt;
-  (cd ~/Projects && find . -mindepth 1 -maxdepth 1 -type d)               | sed -e "s@^.@~/Projects@" >> ~/.fzflist/directories.txt;
-  (cd ~/Projects/note && find . -mindepth 1 -maxdepth 2 -type d)          | sed -e "s@^.@~/Projects/note@" >> ~/.fzflist/directories.txt;
-  (cd ~/Projects/note-next && find . -mindepth 1 -maxdepth 1 -type d)     | sed -e "s@^.@~/Projects/note-next@" >> ~/.fzflist/directories.txt;
+  (cd ~/Projects           && find . -mindepth 1 -maxdepth 1 -type d) | sed -e "s@^.@~/Projects@" >> ~/.fzflist/directories.txt;
+  (cd ~/Projects/note      && find . -mindepth 1 -maxdepth 2 -type d) | sed -e "s@^.@~/Projects/note@" >> ~/.fzflist/directories.txt;
+  (cd ~/Projects/note-next && find . -mindepth 1 -maxdepth 1 -type d) | sed -e "s@^.@~/Projects/note-next@" >> ~/.fzflist/directories.txt;
 }
 
 function update-files() {
   cat ~/Projects/dotfiles/fzf_manual_files.txt > ~/.fzflist/files.txt;
-  (cd ~/Projects/secret && git ls-files)          | sed -e "s@^@~/Projects/secret/@" >> ~/.fzflist/files.txt;
-  (cd ~/Projects/note && git ls-files)            | sed -e "s@^@~/Projects/note/@" >> ~/.fzflist/files.txt;
-  (cd ~/Projects/note-typescript && git ls-files) | sed -e "s@^@~/Projects/note-typescript/@" >> ~/.fzflist/files.txt;
-  (cd ~/Projects/note-react && git ls-files)      | sed -e "s@^@~/Projects/note-react/@" >> ~/.fzflist/files.txt;
-  (cd ~/Projects/dotfiles && git ls-files)        | sed -e "s@^@~/Projects/dotfiles/@" >> ~/.fzflist/files.txt;
   (cd ~/.fzflist && find . -maxdepth 1 -type f)   | sed -e "s@^.@~/.fzflist@" >> ~/.fzflist/files.txt;
 }
 

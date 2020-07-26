@@ -1,0 +1,18 @@
+docker image ls
+docker container ls
+docker container ls -a
+docker container ls -aq | xargs docker container rm
+docker image ls -aq | xargs docker image rm
+docker-compose up
+docker-compose down
+docker-compose build --no-cache
+docker container exec -it CONTAINER_ID /bin/bash
+docker-compose exec application bash
+docker-compose exec db bash
+docker network ls
+docker network inspect NETWORK_ID
+docker-machine ip
+docker-compose config
+heroku login
+heroku container:login
+circleci config validate
