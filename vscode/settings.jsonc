@@ -43,7 +43,6 @@
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Default Dark+",
   "workbench.editor.enablePreview": false,
-  "workbench.editor.closeEmptyGroups": false,
 
   // 以降は Extensions の設定
   "junkfile.dir": ".Trash",
