@@ -7,7 +7,6 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 if [ $(uname) = "Darwin" ] ; then
   export PATH="$HOME/.nodenv/bin:$PATH"
   eval "$(nodenv init -)"
-  export NODE_PATH=$(npm root -g)
 fi
 
 export BASH_SILENCE_DEPRECATION_WARNING=1

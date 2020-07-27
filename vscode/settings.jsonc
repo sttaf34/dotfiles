@@ -10,6 +10,8 @@
   "editor.cursorBlinking": "solid",
   "editor.renderIndentGuides": false,
   "editor.renderWhitespace": "boundary",
+  "editor.renderControlCharacters": true,
+  "editor.copyWithSyntaxHighlighting": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
@@ -23,6 +25,8 @@
 
   "files.eol": "\n",
   "files.encoding": "utf8",
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "files.associations": {
     ".bashrc_*": "shellscript"
@@ -39,7 +43,9 @@
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Default Dark+",
   "workbench.editor.enablePreview": false,
+  "workbench.editor.closeEmptyGroups": false,
 
   // 以降は Extensions の設定
+  "junkfile.dir": ".Trash",
   "trailing-spaces.trimOnSave": true
 }
