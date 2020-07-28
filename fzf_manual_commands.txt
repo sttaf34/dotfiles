@@ -8,6 +8,7 @@ nodenv rehash
 ifconfig | grep 192.168
 history | tail -10
 git add . && git cmm
+code ~/Projects/note-typescript/src/basic/regular-expression.ts
 cd ~/Projects/note/htmlcss && browser-sync start --server --files "*"
 cd ~/Projects/note/javascript && browser-sync start --server --files "*"
 cd ~/Projects/note/jquery && browser-sync start --server --files "*"
