@@ -46,5 +46,6 @@
 
   // 以降は Extensions の設定
   "junkfile.dir": ".Trash",
+  "regex-previewer.enableCodeLens": false,
   "trailing-spaces.trimOnSave": true
 }

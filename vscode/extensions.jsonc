@@ -5,6 +5,8 @@
     "dbaeumer.vscode-eslint",
     "sleistner.vscode-fileutils",
     "shardulm94.trailing-spaces",
+    "chrmarti.regex",
+    "msjsdiag.debugger-for-chrome",
     "mechatroner.rainbow-csv"
   ]
 }
