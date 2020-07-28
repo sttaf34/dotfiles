@@ -8,6 +8,7 @@
     "chrmarti.regex",
     "msjsdiag.debugger-for-chrome",
     "hidenba.open-junkfile",
+    "esbenp.prettier-vscode",
     "mechatroner.rainbow-csv"
   ]
 }

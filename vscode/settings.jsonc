@@ -44,6 +44,14 @@
   "workbench.colorTheme": "Default Dark+",
   "workbench.editor.enablePreview": false,
 
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+
+  "[jsonc]": {
+    "editor.formatOnSave": true
+  },
+
   // 以降は Extensions の設定
   "junkfile.dir": ".Trash",
   "regex-previewer.enableCodeLens": false,
