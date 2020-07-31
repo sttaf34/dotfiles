@@ -42,6 +42,8 @@
 
   "typescript.updateImportsOnFileMove.enabled": "always",
 
+  "window.zoomLevel": 0,
+
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Default Dark+",
   "workbench.editor.enablePreview": false,

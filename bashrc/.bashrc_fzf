@@ -52,6 +52,9 @@ function update-directories() {
 
 function update-files() {
   cat ~/Projects/dotfiles/fzf_manual_files.txt > ~/.fzflist/files.txt;
+  (cd ~/Projects/secret && git ls-files)          | sed -e "s@^@~/Projects/secret/@" >> ~/.fzflist/files.txt;
+  (cd ~/Projects/note && git ls-files)            | sed -e "s@^@~/Projects/note/@" >> ~/.fzflist/files.txt;
+  (cd ~/Projects/dotfiles && git ls-files)        | sed -e "s@^@~/Projects/dotfiles/@" >> ~/.fzflist/files.txt;
   (cd ~/.fzflist && find . -maxdepth 1 -type f)   | sed -e "s@^.@~/.fzflist@" >> ~/.fzflist/files.txt;
 }
 
