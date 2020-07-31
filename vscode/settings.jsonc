@@ -34,6 +34,8 @@
 
   "git.confirmSync": false,
 
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
   "terminal.integrated.fontSize": 19,
   "terminal.integrated.rendererType": "canvas",
   "terminal.integrated.fontWeightBold": "normal",
