@@ -2,7 +2,7 @@
 source ~/.fzf.bash
 export FZF_DEFAULT_OPTS='--reverse --border'
 
-# 予め作っておいたコマンドのリストでfzfする
+# 予め作っておいたコマンドのリストで fzf する
 function commands-to-fzf() {
   local COMMAND=$(cat ~/.fzflist/commands.txt | fzf +m)
   if [ -n "$COMMAND" ]; then
@@ -11,7 +11,7 @@ function commands-to-fzf() {
   fi
 }
 
-# 予め作っておいたパスのリストでfzfしてcdする
+# 予め作っておいたパスのリストで fzf して cd する
 function directories-to-fzf-cd() {
   local DIR_PATH=$(cat ~/.fzflist/directories.txt | fzf +m)
   if [ -n "$DIR_PATH" ]; then
@@ -20,21 +20,31 @@ function directories-to-fzf-cd() {
   fi
 }
 
-# 予め作っておいたパスのリストでfzfしてcodeする
+# 予め作っておいたパスのリストで fzf して code する
 function files-to-fzf-code() {
-  local FILEPATH=$(cat ~/.fzflist/files.txt | fzf +m)
-  if [ -n "$FILEPATH" ]; then
-    eval code $FILEPATH
-    eval history -s code $FILEPATH
+  local FILE_PATH=$(cat ~/.fzflist/files.txt | fzf +m)
+  if [ -n "$FILE_PATH" ]; then
+    eval code $FILE_PATH
+    eval history -s code $FILE_PATH
+  fi
+}
+
+# カレントディレクトリ下の git 管理ファイルで fzf して code する
+function git-ls-files-to-fzf-code() {
+  local FILE_PATH=$(git ls-files | fzf +m)
+  if [ -n "$FILE_PATH" ]; then
+    eval code $FILE_PATH
+    eval history -s code $FILE_PATH
   fi
 }
 
 alias c='commands-to-fzf'
 alias d='directories-to-fzf-cd'
 alias f='files-to-fzf-code'
+alias l='git-ls-files-to-fzf-code'
 
 # history設定
-export HISTIGNORE="c:f:d"
+export HISTIGNORE="c:f:d:l"
 
 function update-commands() {
   cat ~/Projects/dotfiles/fzf_manual_commands.txt > ~/.fzflist/commands.txt;
