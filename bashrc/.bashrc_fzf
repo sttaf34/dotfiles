@@ -63,7 +63,7 @@ alias lf='lower-hierarchy-files-to-fzf-code'
 alias ld='lower-hierarchy-directories-to-fzf-cd'
 
 # history設定
-export HISTIGNORE="c:f:d:l"
+export HISTIGNORE="c:f:d:lf:ld"
 
 function update-commands() {
   cat ~/Projects/dotfiles/fzf_manual_commands.txt > ~/.fzflist/commands.txt;
