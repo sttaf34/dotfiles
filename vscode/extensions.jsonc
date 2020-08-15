@@ -1,7 +1,6 @@
 {
   "recommendations": [
     "lixquid.calculator",
-    "andyyaldoo.vscode-json",
     "dbaeumer.vscode-eslint",
     "sleistner.vscode-fileutils",
     "shardulm94.trailing-spaces",
@@ -9,6 +8,8 @@
     "msjsdiag.debugger-for-chrome",
     "hidenba.open-junkfile",
     "esbenp.prettier-vscode",
-    "mechatroner.rainbow-csv"
+    "toba.vsfire",
+    "mechatroner.rainbow-csv",
+    "andyyaldoo.vscode-json"
   ]
 }
