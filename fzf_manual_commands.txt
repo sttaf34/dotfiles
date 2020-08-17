@@ -2,6 +2,7 @@ return-home-routine
 git-echo-repository-status
 yarn develop
 yarn install
+cd ~/Projects/note-firebase && firebase emulators:start --only firestore,functions
 yarn upgrade --latest
 source ~/.bashrc
 nodenv rehash
