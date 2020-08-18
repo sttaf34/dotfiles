@@ -5,7 +5,7 @@
   "editor.rulers": [80],
   "editor.fontSize": 18,
   "editor.lineHeight": 23,
-  "editor.fontFamily": "Ricty",
+  "editor.fontFamily": "Cica",
   "editor.minimap.enabled": false,
   "editor.cursorBlinking": "solid",
   "editor.renderIndentGuides": false,
@@ -45,6 +45,7 @@
   "window.zoomLevel": 0,
 
   "workbench.startupEditor": "none",
+  "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Default Dark+",
   "workbench.editor.enablePreview": false,
   "workbench.colorCustomizations": {
