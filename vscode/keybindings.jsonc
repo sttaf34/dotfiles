@@ -61,7 +61,7 @@
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
-    "key": "ctrl+shift+[Equal]", // ^
+    "key": "cmd+n",
     "command": "workbench.action.terminal.newInActiveWorkspace"
   },
 
