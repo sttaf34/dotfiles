@@ -7,7 +7,7 @@ function commands-to-fzf() {
   local COMMAND=$(cat ~/.fzflist/commands.txt | fzf +m)
   if [ -n "$COMMAND" ]; then
     eval $COMMAND
-    history -s $COMMAND # ↑押した時の直近の履歴に入る
+    history -s $COMMAND # 直近の履歴に入る
   fi
 }
 
@@ -24,8 +24,12 @@ function directories-to-fzf-cd() {
 function files-to-fzf-code() {
   local FILE_PATH=$(cat ~/.fzflist/files.txt | fzf +m)
   if [ -n "$FILE_PATH" ]; then
-    eval code $FILE_PATH
-    eval history -s code $FILE_PATH
+    if [[ $FILE_PATH =~ pdf$ ]]; then
+      eval open $FILE_PATH
+    else
+      eval code $FILE_PATH
+      eval history -s code $FILE_PATH
+    fi
   fi
 }
 
