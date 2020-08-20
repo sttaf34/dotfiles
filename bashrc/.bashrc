@@ -4,10 +4,8 @@ export LANG=ja_JP.UTF-8;
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
 # nodenv for Mac
-if [ $(uname) = "Darwin" ] ; then
-  export PATH="$HOME/.nodenv/bin:$PATH"
-  eval "$(nodenv init -)"
-fi
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 

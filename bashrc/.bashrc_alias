@@ -17,6 +17,5 @@ alias lal='ls -la'
 alias lao='ls -ld .[^.]*'
 
 alias g='git'
-alias start='open'
 alias gst='git branch -avv && echo '' && git status'
 alias grep='grep --color=auto'
