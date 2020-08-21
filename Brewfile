@@ -1,7 +1,8 @@
-tap "beeftornado/rmtree"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "beeftornado/rmtree"
+tap "nektos/tap"
 
 brew "cocoapods"
 brew "coreutils"
@@ -10,6 +11,7 @@ brew "git"
 brew "jq"
 brew "mysql-client"
 brew "openjdk"
+brew "nektos/tap/act"
 
 cask "alt-tab"
 cask "google-japanese-ime"
