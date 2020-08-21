@@ -1,6 +1,7 @@
 # fzf設定
 # 色設定 => https://github.com/junegunn/fzf/wiki/Color-schemes
 # 色の表 => https://gist.github.com/jasonm23/2868981
+# +m     => https://teratail.com/questions/34788
 source ~/.fzf.bash
 export FZF_DEFAULT_OPTS='
   --reverse
@@ -25,7 +26,7 @@ function directories-to-fzf-cd() {
   fi
 }
 
-# 予め作っておいたパスのリストで fzf して code する
+# 予め作っておいたファイルのパスのリストで fzf して code する
 function files-to-fzf-code() {
   local FILE_PATH=$(cat ~/.fzflist/files.txt | fzf +m)
   if [ -n "$FILE_PATH" ]; then
@@ -35,6 +36,24 @@ function files-to-fzf-code() {
       eval code $FILE_PATH
       eval history -s code $FILE_PATH
     fi
+  fi
+}
+
+# 予め作っておいたファイルのパスのリストで fzf して less する
+function files-to-fzf-less() {
+  local FILE_PATH=$(cat ~/.fzflist/files.txt | fzf +m)
+  if [ -n "$FILE_PATH" ]; then
+    eval less $FILE_PATH
+    eval history -s less $FILE_PATH
+  fi
+}
+
+# カレントディレクトリ直下の package.json で fzf して yarn する
+function yarn-to-fzf() {
+  local COMMAND=$(cat package.json | jq ".scripts" | jq "keys[]" | tr -d '"' | awk '{print "yarn run " $0 }' | fzf +m)
+  if [ -n "$COMMAND" ]; then
+    eval $COMMAND
+    history -s $COMMAND
   fi
 }
 
@@ -53,7 +72,8 @@ function lower-hierarchy-directories() {
     -not -path '.' \
     -not -path "*/node_modules/*" \
     -not -path "*/.git/*" \
-    | awk '{print length(),$0}' | sort -n | awk '{print $2}'
+    -not -path "*/.next/cache/*" \
+    | awk '{print length(), $0}' | sort -n | awk '{print $2}'
 }
 
 # カレントディレクトリ下のディレクトリで fzf して cd する
@@ -68,11 +88,13 @@ function lower-hierarchy-directories-to-fzf-cd() {
 alias c='commands-to-fzf'
 alias d='directories-to-fzf-cd'
 alias f='files-to-fzf-code'
+alias l='files-to-fzf-less'
+alias y='yarn-to-fzf'
 alias lf='lower-hierarchy-files-to-fzf-code'
 alias ld='lower-hierarchy-directories-to-fzf-cd'
 
 # history設定
-export HISTIGNORE="c:f:d:lf:ld"
+export HISTIGNORE="c:f:d:l:y:lf:ld"
 
 function update-commands() {
   cat ~/Projects/dotfiles/fzf_manual_commands.txt > ~/.fzflist/commands.txt;
