@@ -2,7 +2,6 @@ return-home-routine
 git-echo-repository-status
 yarn develop
 yarn install
-cd ~/Projects/note-firebase && firebase emulators:start --only firestore,functions
 yarn upgrade --latest
 source ~/.bashrc
 nodenv rehash
@@ -24,9 +23,6 @@ curl ifconfig.io
 lsof -n -P -iTCP -sTCP:LISTEN
 ps aux | head -1 && ps aux | grep ssh
 git remote -v
-sudo networksetup -setsocksfirewallproxystate Wi-Fi on
-sudo networksetup -setsocksfirewallproxystate Wi-Fi off
 open -a 'Google Chrome' https://ifconfig.io
 cd ~/Projects/note-typescript && yarn ts-node
-php -S localhost:9000
 less /tmp/ip_address_history
