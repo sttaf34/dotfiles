@@ -5,7 +5,6 @@
 [alias]
   l = log --oneline --decorate --graph --date=format:'%Y/%m/%d %H:%M' --pretty='%C(cyan)%ad%C(auto) %h %s %d'
   ll = log --stat --decorate --date=format:'%Y/%m/%d' --pretty='%n- %C(cyan)%ad%C(auto) %h %s %d'
-  lll = log -p
   a = add
   st = status
   cm = commit
@@ -15,7 +14,6 @@
   unstage = reset HEAD
   br = branch -v
   f = fetch
-  tree = log --graph --pretty=format:'%x09%C(yellow)%h  %C(cyan)%ar %x09%C(magenta)%d%Creset %s'
 
 [core]
   editor = code --wait
