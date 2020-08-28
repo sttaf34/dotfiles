@@ -13,6 +13,20 @@ function git-echo-repository-status() {
   done
 }
 
+# ~/Projects 下のリポジトリで1日以内のコミットログを表示
+function git-echo-commit-log() {
+  find ~/Projects -mindepth 1 -maxdepth 1 -type d | sort | while read line
+  do
+    cd $line
+    RESULT=$(git --no-pager l --since="1 days ago")
+    if [ -n "$RESULT" ]; then
+      pwd | printf "${GREEN}[%s]${RESET}\n" $(cat)
+      git --no-pager l --since="1 days ago"
+      echo ''
+    fi
+  done
+}
+
 # ~/Projects 下のリポジトリでフックが設定されているものを表示
 function git-echo-hooks() {
   find ~/Projects -mindepth 1 -maxdepth 1 -type d | sort | while read line
@@ -21,17 +35,6 @@ function git-echo-hooks() {
       -mindepth 1 -maxdepth 1 \
       -not -path "*.sample"
   done
-}
-
-# コマンドをコマンドリストに、重複チェックしてから追加する用の関数
-# 例えば「m git remote -v」のように打つ
-function m() {
-  local FILEPATH=~/Projects/dotfiles/fzf_manual_commands.txt
-  eval "grep \"$@\" $FILEPATH > /dev/null"
-  if [ $? = 1 ]; then
-    echo "echo \"$@\" >> $FILEPATH"
-    echo $@ >> $FILEPATH
-  fi
 }
 
 function return-home-routine() {
@@ -48,4 +51,15 @@ function ipv4_to_binary() {
     echo "obase=2;ibase=10;$line" | bc | printf "%08d " $(cat)
   done
   printf "\n"
+}
+
+# コマンドをコマンドリストに、重複チェックしてから追加する用の関数
+# 例えば「m git remote -v」のように打つ
+function m() {
+  local FILEPATH=~/Projects/dotfiles/fzf_manual_commands.txt
+  eval "grep \"$@\" $FILEPATH > /dev/null"
+  if [ $? = 1 ]; then
+    echo "echo \"$@\" >> $FILEPATH"
+    echo $@ >> $FILEPATH
+  fi
 }

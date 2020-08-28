@@ -1,5 +1,6 @@
 return-home-routine
 git-echo-repository-status
+git-echo-commit-log
 yarn develop
 yarn install
 yarn upgrade --latest
