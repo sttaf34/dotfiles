@@ -1,5 +1,5 @@
 # ~/Projects 下のリポジトリの現在状況を一覧表示
-function git-echo-repository-status() {
+function git-repository-status() {
   find ~/Projects -mindepth 1 -maxdepth 1 -type d | sort | while read line
   do
     cd $line
@@ -13,22 +13,22 @@ function git-echo-repository-status() {
   done
 }
 
-# ~/Projects 下のリポジトリで1日以内のコミットログを表示
-function git-echo-commit-log() {
+# ~/Projects 下のリポジトリで引数時間内のコミットログを表示
+function git-commit-log() {
   find ~/Projects -mindepth 1 -maxdepth 1 -type d | sort | while read line
   do
     cd $line
-    RESULT=$(git --no-pager l --since="1 days ago")
+    RESULT=$(git --no-pager l --since="$1 hours ago")
     if [ -n "$RESULT" ]; then
       pwd | printf "${GREEN}[%s]${RESET}\n" $(cat)
-      git --no-pager l --since="1 days ago"
+      git --no-pager l --since="$1 hours ago"
       echo ''
     fi
   done
 }
 
 # ~/Projects 下のリポジトリでフックが設定されているものを表示
-function git-echo-hooks() {
+function git-hooks() {
   find ~/Projects -mindepth 1 -maxdepth 1 -type d | sort | while read line
   do
     find $line/.git/hooks \
