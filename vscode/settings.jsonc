@@ -17,6 +17,8 @@
     "source.fixAll.stylelint": true
   },
 
+  "emmet.showAbbreviationSuggestions": false,
+
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "explorer.autoReveal": false,
