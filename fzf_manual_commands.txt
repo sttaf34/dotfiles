@@ -1,6 +1,6 @@
 return-home-routine
-git-echo-repository-status
-git-echo-commit-log
+git-repository-status
+git-commit-log 12
 yarn develop
 yarn install
 yarn upgrade --latest
@@ -18,7 +18,7 @@ nodenv versions
 git commit --amend
 npm ls --depth=0
 npm ls -g --depth=0
-git-echo-hooks
+git-hooks
 osascript -e 'tell application "Finder" to sleep'
 curl ifconfig.io
 lsof -n -P -iTCP -sTCP:LISTEN
