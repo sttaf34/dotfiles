@@ -27,6 +27,18 @@ function git-commit-log() {
   done
 }
 
+# ~/Projects 下のリポジトリで引数時間内のコミットログをまとめて表示
+function git-commit-log-union() {
+  find ~/Projects -mindepth 1 -maxdepth 1 -type d | sort | while read line
+  do
+    cd $line
+    RESULT=$(git --no-pager l --since="$1 hours ago")
+    if [ -n "$RESULT" ]; then
+      git --no-pager l --since="$1 hours ago"
+    fi
+  done | sort -r
+}
+
 # ~/Projects 下のリポジトリでフックが設定されているものを表示
 function git-hooks() {
   find ~/Projects -mindepth 1 -maxdepth 1 -type d | sort | while read line
@@ -42,7 +54,7 @@ function return-home-routine() {
   curl -s ifconfig.io >> /tmp/ip_address_history
   echo "curl -s ifconfig.io >> /tmp/ip_address_history"
 
-  git-echo-repository-status
+  git-repository-status
 }
 
 function ipv4_to_binary() {
