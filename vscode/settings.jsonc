@@ -17,7 +17,7 @@
     "source.fixAll.stylelint": true
   },
 
-  "emmet.showAbbreviationSuggestions": false,
+  "emmet.excludeLanguages": ["typescript", "typescriptreact"],
 
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
@@ -51,7 +51,8 @@
   "workbench.colorTheme": "Default Dark+",
   "workbench.editor.enablePreview": false,
   "workbench.colorCustomizations": {
-    "statusBar.background": "#004d80"
+    "statusBar.background": "#004d80",
+    "list.focusBackground": "#3d6687"
   },
 
   "[json]": {
