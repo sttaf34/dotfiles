@@ -1,11 +1,18 @@
 export LANG=ja_JP.UTF-8;
 
-# MySQL for Mac
+# MySQL
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
-# nodenv for Mac
+# nodenv
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
+
+# Google Cloud
+export CLOUDSDK_PYTHON="/usr/local/opt/python@3.8/libexec/bin/python"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+
+# Ruby
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
