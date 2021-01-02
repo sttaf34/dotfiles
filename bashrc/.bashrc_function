@@ -57,21 +57,10 @@ function return-home-routine() {
   git-repository-status
 }
 
-function ipv4_to_binary() {
+function ipv4-to-binary() {
   echo "$@" | tr '.' '\n' | while read line
   do
     echo "obase=2;ibase=10;$line" | bc | printf "%08d " $(cat)
   done
   printf "\n"
-}
-
-# コマンドをコマンドリストに、重複チェックしてから追加する用の関数
-# 例えば「m git remote -v」のように打つ
-function m() {
-  local FILEPATH=~/Projects/dotfiles/fzf_manual_commands.txt
-  eval "grep \"$@\" $FILEPATH > /dev/null"
-  if [ $? = 1 ]; then
-    echo "echo \"$@\" >> $FILEPATH"
-    echo $@ >> $FILEPATH
-  fi
 }
