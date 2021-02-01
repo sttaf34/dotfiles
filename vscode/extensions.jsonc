@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "eamodio.gitlens",
     "lixquid.calculator",
     "dbaeumer.vscode-eslint",
     "sleistner.vscode-fileutils",
