@@ -26,3 +26,4 @@ git remote -v
 open -a 'Google Chrome' https://ifconfig.io
 cd ~/Projects/note-typescript && yarn ts-node
 less /tmp/ip_address_history
+\rm -i ~/.Trash/*
