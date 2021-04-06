@@ -19,3 +19,7 @@ alias lao='ls -ld .[^.]*'
 alias g='git'
 alias gst='git branch -avv && echo '' && git status'
 alias grep='grep --color=auto'
+
+# エイリアスの一時的な無効化は
+# \ls
+# バックスラッシュ付ければ良い
