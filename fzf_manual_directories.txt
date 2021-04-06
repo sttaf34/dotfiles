@@ -3,3 +3,4 @@
 ~/Projects
 ~/Desktop
 ~/Library
+~/.Trash
