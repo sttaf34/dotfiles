@@ -49,14 +49,6 @@ function git-hooks() {
   done
 }
 
-function return-home-routine() {
-  date +%F | tr '\n' ' ' >> /tmp/ip_address_history
-  curl -s ifconfig.io >> /tmp/ip_address_history
-  echo "curl -s ifconfig.io >> /tmp/ip_address_history"
-
-  git-repository-status
-}
-
 function ipv4-to-binary() {
   echo "$@" | tr '.' '\n' | while read line
   do
